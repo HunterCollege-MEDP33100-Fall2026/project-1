@@ -1,0 +1,51 @@
+.flicker-img {
+    width: clamp(150px, 30vw, 250px);
+    max-width: 80vw;
+    height: auto;
+    animation-name: flicker;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(0 0 10px #ffd700)
+}
+
+
+
+@keyframes flicker { 
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+    20%, 24%, 55% {
+        opacity: 0;
+        transform: translate(2px, -2px)
+    }
+}
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+h1{
+    color:#8B0000;
+    font-family: 'Jim Nightshade', cursive;
+}
