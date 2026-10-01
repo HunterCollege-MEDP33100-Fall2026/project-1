@@ -1,0 +1,175 @@
+path {
+   fill: transparent;
+}
+
+text {
+   font-size: 27px;
+   font-family: "Ephesis", cursive;
+   font-weight: 500;
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+   font-family: "Short Stack", cursive;
+   background-image: url(images/bg.jpg);
+}
+
+.landing-div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0px;
+}
+
+.mooncake-div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#mooncake {
+   position: fixed;
+   top: 250px;
+}
+
+/* general page setup */
+.story-div {
+   display: flex;
+   flex-direction: row;
+}
+
+/* includes side bar */
+.page-div {
+   display: flex;
+   flex-direction: row;
+
+   width: 100vw;
+   height: 100vh;
+}
+
+/* just page content */
+.page {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 100vw;
+   height: 100vh;
+
+   font-size: 25px;
+}
+
+.page p {
+   width: 1000px;
+   text-align: center;
+}
+
+.scroll-next {
+   width: 250px;
+   height: 100%;
+   opacity: 0;
+}
+
+.scroll-back {
+   width: 250px;
+   height: 100%;
+   opacity: 0;
+}
+
+/* page 1 */
+
+.sun-grid {
+   display: grid;
+   grid-template-columns: repeat(5, auto);
+}
+
+.sun-grid img {
+   width: 100%;
+   height: 100%;
+   max-width: 200px;
+}
+
+/* page 2 */
+.elixir img {
+   width: 100%;
+   height: 100%;
+   max-width: 300px;
+}
+
+/* page 3 */
+.change img {
+   width: 100%;
+   height: 100%;
+   max-width: 450px;
+
+   z-index: 2000;
+}
+
+/* page 4 */
+.moon img {
+   width: 100%;
+   height: 100%;
+   max-width: 450px;
+}
+
+/* responsiveness */
+@media (max-width: 950px) {
+   .sun-grid {
+      grid-template-columns: repeat(4, auto);
+   }
+
+   .sun-grid img {
+      max-width: 150px;
+   }
+
+   .page p {
+      width: 675px;
+   }
+}
+
+@media (max-width: 600px) {
+   .page {
+      font-size: 20px;
+   }
+   .page p {
+      width: 375px;
+   }
+   .sun-grid {
+      grid-template-columns: repeat(3, auto);
+   }
+}
+
+@media (max-width: 400px) {
+   #mooncake {
+      top: 150px;
+      max-width: 300px;
+   }
+
+   .page {
+      font-size: 18px;
+   }
+
+   .page p {
+      width: 300px;
+   }
+   .sun-grid {
+      grid-template-columns: repeat(2, auto);
+   }
+
+   .scroll-next {
+      width: 650px;
+   }
+
+   .scroll-back {
+      width: 650px;
+   }
+
+   .moon img {
+      max-width: 250px;
+   }
+}
